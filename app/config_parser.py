@@ -42,7 +42,9 @@ def _read_pairs(path: str) -> dict[str, str]:
                 if key in pairs:
                     raise ConfigError(f"line {number}: duplicate key '{key}'")
                 if not value:
-                    raise ConfigError(f"line {number}: empty value for '{key}'")
+                    raise ConfigError(
+                        f"line {number}: empty value for '{key}'"
+                    )
                 pairs[key] = value
     except FileNotFoundError:
         raise ConfigError(f"config file '{path}' not found") from None

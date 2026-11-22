@@ -1,8 +1,3 @@
-"""A-Maze-ing entry point.
-
-Usage: python3 a_maze_ing.py config.txt
-"""
-
 import sys
 from typing import Optional
 
